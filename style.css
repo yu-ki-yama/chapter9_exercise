@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.blog{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-article{
+    height: 100%;
+    width: 300px;
+    position: relative;
+    border: solid 1px #dfdfdf;
+}
+
+.blog-article:nth-child(1),.blog-article:nth-child(2){
+    margin-right: 30px;
+}
+
+.article-num{
+    background-color: orange;
+    height: 35px;
+    width: 75px;
+    font-size: 24px;
+    color: white;
+    z-index: 1;
+    position: relative;
+    line-height: 30px;
+    text-align: center;
+}
+
+img{
+    position: absolute;
+    top: 0;
+    margin: 10px 10px 0 10px;
+    object-position: 0 100%;
+    object-fit: cover;
+    max-height: 150px;
+}
+
+.article-content{
+    padding-top: 140px;
+    margin: 0 10px 15px 10px;
+
+}
+
+.article-content h2{
+    padding-bottom: 10px;
+}
+
+.article-content p{
+    font-size: 16px;
+}
+
+@media screen and (max-width: 960px) {
+    img{
+        max-height: 15.6vw;
+        width: 100%;
+        margin-right: 0;
+        padding-right: 20px;
+        object-position: 0 100%;
+        object-fit: cover;
+    }
+    .article-content{
+        padding-top: 14.5vw;
+    }
+    .article-num{
+        height: 3.7vw;
+        width: 8.1vw;
+        font-size: 2.55vw;
+        text-align: unset;
+        padding-left: 0.4vw;
+        line-height: 3.2vw;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .blog{
+        flex-direction: column;
+        align-items: center;
+    }
+    .blog-article:nth-child(1),.blog-article:nth-child(2){
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .blog-article{
+        width: 90%;
+    }
+    img{
+        max-height: 39vw;
+        width: 100%;
+        margin-right: 0;
+        padding-right: 20px;
+        object-position: 0 100%;
+        object-fit: cover;
+    }
+    .article-content{
+        padding-top: 35vw;
+    }
+    .article-num{
+        height: 8vw;
+        width: 13.5vw;
+        font-size: 4.5vw;
+        text-align: unset;
+        padding-left: 0.4vw;
+        line-height: normal;
+    }
+
+}
